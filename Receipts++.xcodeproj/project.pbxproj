@@ -15,6 +15,9 @@
 		5E9621831B42CABB00D3D74A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E9621821B42CABB00D3D74A /* Images.xcassets */; };
 		5E9621861B42CABB00D3D74A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9621841B42CABB00D3D74A /* LaunchScreen.xib */; };
 		5E9621921B42CABB00D3D74A /* Receipts__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9621911B42CABB00D3D74A /* Receipts__Tests.m */; };
+		5E9621A51B42E75D00D3D74A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9621A41B42E75D00D3D74A /* DetailViewController.m */; };
+		5E9621BA1B4301D600D3D74A /* Label.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9621B91B4301D600D3D74A /* Label.m */; };
+		5E9621BD1B4301D600D3D74A /* Receipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9621BC1B4301D600D3D74A /* Receipt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,12 @@
 		5E96218B1B42CABB00D3D74A /* Receipts++Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Receipts++Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E9621901B42CABB00D3D74A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E9621911B42CABB00D3D74A /* Receipts__Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Receipts__Tests.m; sourceTree = "<group>"; };
+		5E9621A31B42E75D00D3D74A /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		5E9621A41B42E75D00D3D74A /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		5E9621B81B4301D600D3D74A /* Label.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Label.h; sourceTree = "<group>"; };
+		5E9621B91B4301D600D3D74A /* Label.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Label.m; sourceTree = "<group>"; };
+		5E9621BB1B4301D600D3D74A /* Receipt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Receipt.h; sourceTree = "<group>"; };
+		5E9621BC1B4301D600D3D74A /* Receipt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Receipt.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +92,16 @@
 		5E9621711B42CABB00D3D74A /* Receipts++ */ = {
 			isa = PBXGroup;
 			children = (
+				5E9621BB1B4301D600D3D74A /* Receipt.h */,
+				5E9621BC1B4301D600D3D74A /* Receipt.m */,
+				5E9621B81B4301D600D3D74A /* Label.h */,
+				5E9621B91B4301D600D3D74A /* Label.m */,
 				5E9621761B42CABB00D3D74A /* AppDelegate.h */,
 				5E9621771B42CABB00D3D74A /* AppDelegate.m */,
 				5E96217C1B42CABB00D3D74A /* ViewController.h */,
 				5E96217D1B42CABB00D3D74A /* ViewController.m */,
+				5E9621A31B42E75D00D3D74A /* DetailViewController.h */,
+				5E9621A41B42E75D00D3D74A /* DetailViewController.m */,
 				5E96217F1B42CABB00D3D74A /* Main.storyboard */,
 				5E9621821B42CABB00D3D74A /* Images.xcassets */,
 				5E9621841B42CABB00D3D74A /* LaunchScreen.xib */,
@@ -222,9 +237,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E9621BA1B4301D600D3D74A /* Label.m in Sources */,
+				5E9621A51B42E75D00D3D74A /* DetailViewController.m in Sources */,
 				5E9621781B42CABB00D3D74A /* AppDelegate.m in Sources */,
 				5E9621751B42CABB00D3D74A /* main.m in Sources */,
 				5E96217E1B42CABB00D3D74A /* ViewController.m in Sources */,
+				5E9621BD1B4301D600D3D74A /* Receipt.m in Sources */,
 				5E96217B1B42CABB00D3D74A /* Receipts__.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
