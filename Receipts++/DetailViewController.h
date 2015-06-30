@@ -19,8 +19,7 @@
 
 @property (nonatomic, strong) Receipt *receipt;
 
-@property (weak, nonatomic) IBOutlet UITableView *labelsTableView;
-
+@property (weak, nonatomic) IBOutlet UITextField *changeTitleTextField;
 
 
 
