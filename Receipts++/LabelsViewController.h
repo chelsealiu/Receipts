@@ -12,12 +12,13 @@
 
 @class Receipt;
 
-@interface LabelsViewController : UIViewController <NSFetchedResultsControllerDelegate>
+@interface LabelsViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
-@property (strong, nonatomic) Receipt *receipt;
-
+//@property (strong, nonatomic) Receipt *receipt;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) Label *label;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+//@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
 

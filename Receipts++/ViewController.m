@@ -8,8 +8,6 @@
 
 #import "ViewController.h"
 #import "DetailViewController.h"
-#import "LabelsViewController.h"
-#import "Label.h"
 #import "Receipt.h"
 
 
@@ -26,11 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
 
     
 }
@@ -41,13 +34,35 @@
     
 }
 
+
+-(void)viewWillAppear:(BOOL)animated {
+    
+    
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Label"];
+    
+    //fetchRequest.predicate = [NSPredicate predicateWithFormat:@"club != nil"];
+    
+    NSError *error;
+    
+    NSUInteger count = [self.managedObjectContext countForFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NSLog(@"Error %@", error);
+    }
+    
+    self.title = [NSString stringWithFormat:@"%li Labels", count];
+}
+
+
+
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"newReceipt"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Receipt *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        [[segue destinationViewController] setReceipt:object];
+        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        [[segue destinationViewController] setDetailItem:object];
+        
         //passing a new receipt to the next viewcontroller
     }
 }
@@ -86,7 +101,7 @@
 }
 
 
-
+    
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -126,7 +141,7 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     Receipt *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = object.title;
+    cell.textLabel.text = object.title; //title of receipt
 }
 
 #pragma mark - Fetched results controller

@@ -13,14 +13,14 @@
 
 @interface DetailViewController : UIViewController
 
+@property (nonatomic, strong) Receipt *detailItem;
+
 @property (weak, nonatomic) IBOutlet UITextField *amountTextField;
 @property (weak, nonatomic) IBOutlet UITextView *detailsTextField;
 @property (weak, nonatomic) IBOutlet UILabel *timeStampLabel;
-
-@property (nonatomic, strong) Receipt *receipt;
-
 @property (weak, nonatomic) IBOutlet UITextField *changeTitleTextField;
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
 @end

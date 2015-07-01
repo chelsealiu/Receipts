@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "LabelsViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,7 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     ViewController *controller = (ViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
+
     return YES;
 }
 
